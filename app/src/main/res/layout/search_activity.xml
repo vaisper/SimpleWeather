@@ -6,37 +6,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageButton
+        android:id="@+id/cancel_action"
         android:layout_width="@dimen/size_button_cancel"
-        android:layout_height="50dp"
-        android:layout_marginStart="@dimen/indent_left_searchActivity">
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/indent_left_searchActivity"
+        android:src="@drawable/back_icon">
     </ImageButton>
+
     <TextView
         android:id="@+id/main_textbox"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/name_activity"
-        android:lines="2"
-        android:textSize="20sp"
+        android:layout_marginStart="@dimen/indent_left_searchActivity"
         android:layout_marginTop="@dimen/indent_top_searchActivity"
-        android:layout_marginStart="@dimen/indent_left_searchActivity">
-    </TextView>
+        android:text="@string/name_activity"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"></TextView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        >
     <EditText
         android:id="@+id/editText_search"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-
+        android:inputType="text"
         android:layout_marginLeft="@dimen/indent_left_searchActivity"
         android:hint="введите местоположение">
     </EditText>
 
         <ImageButton
+            android:id="@+id/search_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="10dp">
+            android:src="@drawable/search_icon">
 
         </ImageButton>
     </LinearLayout>

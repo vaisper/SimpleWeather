@@ -4,11 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/no_action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="@dimen/size_ImageButton_add"
+            android:layout_height="@dimen/size_ImageButton_add"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/add_icon"
+            app:layout_constraintBottom_toBottomOf="@id/no_action_container"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_town"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/name_town"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/no_action_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
-        android:id="@+id/daycard_item_constraint"
+        android:id="@+id/item_constraint"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
@@ -21,63 +56,41 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/name_town"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/name_town"
-            app:layout_constraintBottom_toTopOf="@id/temp_now"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.063">
-
-        </TextView>
-
-        <TextView
             android:id="@+id/temp_now"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:text="@string/temp_now"
             android:textSize="100sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.313"></TextView>
+            app:layout_constraintVertical_bias="0.218" />
 
         <TextView
             android:id="@+id/condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
             android:text="@string/weather_condition"
-            android:textSize="20sp"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="@+id/temp_now"
             app:layout_constraintRight_toRightOf="@id/temp_now"
             app:layout_constraintTop_toBottomOf="@+id/temp_now"
             app:layout_constraintVertical_bias="0.0"></TextView>
-
     </androidx.constraintlayout.motion.widget.MotionLayout>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <Button
+        android:id="@+id/forecast_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
-            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:menu="@menu/menu_main"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="675dp" />
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:layout_height="60dp"
+        android:backgroundTint="@color/blue"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/indent_forecast_button"
+        android:layout_marginEnd="@dimen/indent_forecast_button"
+        android:layout_marginBottom="50dp"
+        android:text="Прогноз на неделю"
+        android:textColor="@color/black"></Button>
 </LinearLayout>
