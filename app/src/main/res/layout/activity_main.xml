@@ -91,6 +91,6 @@
         android:layout_marginStart="@dimen/indent_forecast_button"
         android:layout_marginEnd="@dimen/indent_forecast_button"
         android:layout_marginBottom="50dp"
-        android:text="Прогноз на неделю"
+        android:text="@string/text_forecast_button"
         android:textColor="@color/black"></Button>
 </LinearLayout>
