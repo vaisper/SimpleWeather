@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_cloud">100dp</dimen>
+    <dimen name="indent_top_searchActivity">4dp</dimen>
+    <dimen name="indent_left_searchActivity">10dp</dimen>
+    <dimen name="size_button_cancel">50dp</dimen>
+</resources>
