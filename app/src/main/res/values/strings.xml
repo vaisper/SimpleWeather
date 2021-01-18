@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SimpleWeather</string>
+    <string name="defoult_temp">defoult_temp</string>
+    <string name="temp_now">-30°</string>
+    <string name="weather_condition">облачно</string>
+    <string name="name_town">Khabarovsk</string>
+    <string name="name_activity">Управление городами</string>
 </resources>
