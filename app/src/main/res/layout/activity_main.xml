@@ -86,11 +86,11 @@
         android:id="@+id/forecast_button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:backgroundTint="@color/blue"
         android:layout_gravity="center"
         android:layout_marginStart="@dimen/indent_forecast_button"
         android:layout_marginEnd="@dimen/indent_forecast_button"
         android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/blue"
         android:text="@string/text_forecast_button"
         android:textColor="@color/black"></Button>
 </LinearLayout>
